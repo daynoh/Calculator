@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color:rgb(236, 236, 222);
+    font-family: Cabin,Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}  
+
+.main-container{
+    display:flex;
+    background-color: rgb(90, 85, 79);
+    flex-direction: column;
+    border: solid rgb(173, 170, 170);
+    padding: 20px;
+    border-radius: 10px;
+    gap: 10px;
+}
+.main-container .screen{
+    height: 70px;
+    padding : 10px;
+    width: 300px;
+    background-color: white;
+    border: solid rgb(173, 170, 170);
+    text-align: right;
+    border-radius: 10px;
+    
+}
+.buttons
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,1fr);
+    gap:10px;
+    font-size: 1.2rem;
+    
+}
+.buttons .btn{
+    transition: .2s;
+    height: 60px;
+    padding: 10px;
+    border-color: rgb(173, 170, 170);
+    border-radius: 5px;
+    border-style:groove;
+    font-size: 1.2rem;
+
+}
+.btn.clear{
+    background-color: rgb(157, 248, 20);
+}
+.btn.delete{
+    background-color: rgb(226, 125, 125);
+}
+
+.clear{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.delete{
+    grid-column-start: 3;
+    grid-column-end: 5
+}
+
+
+.btn:hover{
+    background-color: rgb(148, 142, 142);
+    color: azure;
+    font-size: 1.3rem;
+}
+.btn.clear:hover{
+    background-color: rgb(78, 252, 78);
+}
+
+.btn.delete:hover{
+    background-color: red;
+}
+.btn:active{
+    transform: scale(1.1);
+    background-color: white;
+    color: black;
+    font: 1.2rem;
+}
