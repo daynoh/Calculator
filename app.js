@@ -24,9 +24,7 @@ console.log(numberBtns.length)
 for (let i = 0; i < numberBtns.length; i++){
     numberBtns[i].addEventListener('click',function(e)
     {
-        console.log(e.target.innerText)
         addToScreen(e.target.innerText)
-
     })
 }
 
@@ -46,7 +44,6 @@ for (let i = 0; i< oprBtns.length; i++){
             {
                 let a = topScreen[0].innerText
                 let op = topScreen[0].innerText.slice(-1)
-                console.log(op)
                 operate(parseFloat(a),parseFloat(btmScreen[0].innerText),op)
                 topScreen[0].innerText = ''
                 btmScreen[0].innerText = running_calc
